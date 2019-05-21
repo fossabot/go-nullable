@@ -15,15 +15,9 @@ func (i Int32) IsValid() bool {
 	return i.valid
 }
 
-// Value is an alias for ValueOrZero.
-// See ValueOrZero for more info.
-func (i Int32) Value() int32 {
-	return i.ValueOrZero()
-}
-
 // Value attempts to get the value of the int.
 // If the int is nil, this will return 0.
-func (i Int32) ValueOrZero() int32 {
+func (i Int32) Value() int32 {
 	// Check if the int is valid.
 	if !i.IsValid() {
 		return 0

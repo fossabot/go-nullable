@@ -15,15 +15,9 @@ func (b Bool) IsValid() bool {
 	return b.valid
 }
 
-// Value is an alias for ValueOrZero.
-// See ValueOrZero for more info.
-func (b Bool) Value() bool {
-	return b.ValueOrZero()
-}
-
 // Value attempts to get the value of the bool.
 // If the bool is nil, this will return false.
-func (b Bool) ValueOrZero() bool {
+func (b Bool) Value() bool {
 	// Check if the bool is valid.
 	if !b.IsValid() {
 		return false

@@ -46,8 +46,7 @@ if f32.IsValid() {
 // Getting the value from the nullable type or the zero value
 // for the type if it is nil.
 i := NilInt()
-v := i.ValueOrZero() // This returns 0 because the int is nil.
-v = i.Value() // Value() is an alias for ValueOrZero()
+v := i.Value() // This returns 0 because the int is nil.
 ```
 
 ```go

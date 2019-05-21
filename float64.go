@@ -15,15 +15,9 @@ func (f Float64) IsValid() bool {
 	return f.valid
 }
 
-// Value is an alias for ValueOrZero.
-// See ValueOrZero for more info.
-func (f Float64) Value() float64 {
-	return f.ValueOrZero()
-}
-
 // Value attempts to get the value of the float.
 // If the float is nil, this will return 0.
-func (f Float64) ValueOrZero() float64 {
+func (f Float64) Value() float64 {
 	// Check if the float is valid.
 	if !f.IsValid() {
 		return 0
