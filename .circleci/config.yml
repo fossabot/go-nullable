@@ -1,0 +1,15 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: hassieswift621/circleci-go-codacy:1.12.5
+
+    working_directory: /go/src/github.com/hassieswift621/go-nullable
+
+    steps:
+      - checkout
+      - run: mkdir -p /tmp/test-results
+      - run: gotestsum --junitfile /tmp/test-results/unit-tests.xml --format standard-verbose
+      - store_test_results:
+          path: /tmp/test-results
+      - run: coverage
