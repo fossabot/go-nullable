@@ -102,6 +102,7 @@ if parsed.MemberCount != nil {
 
 ## Todo
 - Tests
+- Add support for converting between types for JSON unmarshalling, i.e. string to nullable int.
 
 ## License
 Copyright &copy;2019 Hassie.
