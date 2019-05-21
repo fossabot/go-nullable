@@ -15,6 +15,12 @@ func (s String) IsValid() bool {
 	return s.valid
 }
 
+// Value is an alias for ValueOrZero.
+// See ValueOrZero for more info.
+func (s String) Value() string {
+	return s.ValueOrZero()
+}
+
 // Value attempts to get the value of the string.
 // If the string is nil, this will return "".
 func (s String) ValueOrZero() string {

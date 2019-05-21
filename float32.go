@@ -15,6 +15,12 @@ func (f Float32) IsValid() bool {
 	return f.valid
 }
 
+// Value is an alias for ValueOrZero.
+// See ValueOrZero for more info.
+func (f Float32) Value() float32 {
+	return f.ValueOrZero()
+}
+
 // Value attempts to get the value of the float.
 // If the float is nil, this will return 0.
 func (f Float32) ValueOrZero() float32 {

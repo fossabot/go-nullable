@@ -15,6 +15,12 @@ func (i Int64) IsValid() bool {
 	return i.valid
 }
 
+// Value is an alias for ValueOrZero.
+// See ValueOrZero for more info.
+func (i Int64) Value() int64 {
+	return i.ValueOrZero()
+}
+
 // Value attempts to get the value of the int.
 // If the int is nil, this will return 0.
 func (i Int64) ValueOrZero() int64 {
