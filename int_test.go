@@ -32,6 +32,33 @@ func TestInt_MarshalJSON(t *testing.T) {
 	}
 }
 
+func TestInt_Nil(t *testing.T) {
+	v := 62762
+	i := IntFrom(v)
+
+	i.Nil()
+
+	if i.IsValid() {
+		t.Errorf("Int was not nil")
+	}
+}
+
+func TestInt_Set(t *testing.T) {
+	v := 283813
+	i := IntFrom(1279)
+
+	i.Set(v)
+
+	if !i.IsValid() {
+		t.Errorf("Int was nil")
+	}
+
+	actual := i.Value()
+	if actual != v {
+		t.Errorf("Int was not valid, expected %d, got %d", v, actual)
+	}
+}
+
 func TestInt_Value(t *testing.T) {
 	v := 429934
 	i := IntFrom(v)
