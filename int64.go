@@ -15,6 +15,17 @@ func (i Int64) IsValid() bool {
 	return i.valid
 }
 
+// Nil sets the value of the int to nil.
+func (i *Int64) Nil() {
+	i.valid = false
+}
+
+// Set sets the value of the int, effectively making it non nil.
+func (i *Int64) Set(value int64) {
+	i.valid = true
+	i.value = value
+}
+
 // Value attempts to get the value of the int.
 // If the int is nil, this will return 0.
 func (i Int64) Value() int64 {

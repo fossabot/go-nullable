@@ -15,6 +15,17 @@ func (b Bool) IsValid() bool {
 	return b.valid
 }
 
+// Nil sets the value of the bool to nil.
+func (b *Bool) Nil() {
+	b.valid = false
+}
+
+// Set sets the value of the bool, effectively making it non nil.
+func (b *Bool) Set(value bool) {
+	b.valid = true
+	b.value = value
+}
+
 // Value attempts to get the value of the bool.
 // If the bool is nil, this will return false.
 func (b Bool) Value() bool {

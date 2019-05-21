@@ -15,6 +15,17 @@ func (s String) IsValid() bool {
 	return s.valid
 }
 
+// Nil sets the value of the string to nil.
+func (s *String) Nil() {
+	s.valid = false
+}
+
+// Set sets the value of the string, effectively making it non nil.
+func (s *String) Set(value string) {
+	s.valid = true
+	s.value = value
+}
+
 // Value attempts to get the value of the string.
 // If the string is nil, this will return "".
 func (s String) Value() string {

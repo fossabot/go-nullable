@@ -15,6 +15,17 @@ func (f Float32) IsValid() bool {
 	return f.valid
 }
 
+// Nil sets the value of the float to nil.
+func (f *Float32) Nil() {
+	f.valid = false
+}
+
+// Set sets the value of the float, effectively making it non nil.
+func (f *Float32) Set(value float32) {
+	f.valid = true
+	f.value = value
+}
+
 // Value attempts to get the value of the float.
 // If the float is nil, this will return 0.
 func (f Float32) Value() float32 {
