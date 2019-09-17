@@ -1,4 +1,6 @@
 # Go Nullable
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhassieswift621%2Fgo-nullable.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fhassieswift621%2Fgo-nullable?ref=badge_shield)
+
 Nullable types for Go with JSON support where a JSON value may be optional and nullable.
 
 ## Nullable Types
@@ -117,3 +119,6 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhassieswift621%2Fgo-nullable.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fhassieswift621%2Fgo-nullable?ref=badge_large)
